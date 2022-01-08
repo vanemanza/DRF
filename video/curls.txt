@@ -1,0 +1,18 @@
+Realizar la peticion con curl:
+curl http://localhost:8000/videos/
+-> visualizamos el objeto  json
+
+para testear el endpoint puedo hacerlo con curl si no quiero generar 
+un formulario. 
+-H: head
+-d: descripcion?
+
+Post: -> crear un nuevo registro
+curl -X POST http://localhost:8000/videos/ -H "Content-Type: application/json" -d '{"title":"nuevo titulo", "description": "nueva descripcion", "slug":"nuevo-video"}'
+
+
+Put: -> actualizar
+curl -X PUT http://localhost:8000/videos/1 -H "Content-Type: application/json" -d '{"title":"titulo actualizado", "description": "descripcion actualizada", "slug":"nuevo-video"}'
+
+Delete:
+curl -X DELETE http://localhost:8000/videos/2
